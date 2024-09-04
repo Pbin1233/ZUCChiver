@@ -25,8 +25,7 @@ def move_files_to_yesterday_folder(source_folder, destination_base_folder):
 
     print(f"All contents of {source_folder} have been moved to {destination_folder}")
 
-# Example usage
-source_folder = '/path/to/source_folder'
-destination_base_folder = '/path/to/destination_base_folder'
+source_folder = os.getenv('SOURCE_DIR')
+destination_base_folder = os.getenv('ARCHIVE_DIR')
 
 move_files_to_yesterday_folder(source_folder, destination_base_folder)
